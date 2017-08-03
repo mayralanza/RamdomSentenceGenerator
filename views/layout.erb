@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title><%= "Ruby RSG" %></title>
+  <meta charset="UTF8">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!--  CSS file Link  -->
+  <link rel="stylesheet" type="text/css" href="bootstrap-styles.css">
+</head>
+<body>
+<header>
+  <h1>RubyRSG WebApp - Random Sentence Generator</h1>
+  </header>
+  <section>
+    <h2>COP 4053 Web Apps Design</h2>
+    <p>Author: Mayra Lanza</p>
+    <!-- Selection Method  -->
+    <div class="input-group">
+    <form method = "post" action = "/rsg" id = "grammar-select">
+      Grammar Files:
+      <select id = "grammar" name = "grammar">
+        <option value="Blank"></option>
+        <option value="Bionic-Woman-episode">Bionic-Woman-episode</option>
+        <option value="Bond-movie">Bond-movie</option>
+        <option value="Civ-paper">Civ-paper</option>
+        <option value="College-rejection-letter">College-rejection-letter</option>
+        <option value="CS-assignment-handout">CS-assignment-handout</option>
+        <option value="CS-nightmare">CS-nightmare</option>
+        <option value="Dear-John-letter">Dear-John-letter</option>
+        <option value="Extension-request">Extension-request</option>
+        <option value="Friday-13th-movie">Friday-13th-movie</option>
+        <option value="Haiku">Haiku</option>
+        <option value="How-they-met-story">How-they-met-story</option>
+        <option value="Insult">Insult</option>
+        <option value="Kant">Kant</option>
+        <option value="Math-expression">Math-expression</option>
+        <option value="Microsoft-press-release">Microsoft-press-release</option>
+        <option value="Poem">Poem</option>
+        <option value="Programming-bug">Programming-bug</option>
+        <option value="Star-Trek-episode">Star-Trek-episode</option>
+        <option value="Suicide-note">Suicide-note</option>
+        <option value="Wired-sound-bite">Wired-sound-bite</option>
+      </select>
+    </form>
+    <button class="pull-right" type = "submit" form="grammar-select" value="submit">Generate</button>
+    </div>
+    <br><%= yield %>
+  </section>
+</body>
+</html>
